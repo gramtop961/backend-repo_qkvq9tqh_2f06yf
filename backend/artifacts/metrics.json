@@ -1,0 +1,9 @@
+{
+  "note": "Sample metrics for synthetic training run. Replace by running backend/model_train.py to regenerate with real subsets.",
+  "roc_auc": 0.95,
+  "classification_report": {
+    "0": {"precision": 0.90, "recall": 0.90, "f1-score": 0.90, "support": 6},
+    "1": {"precision": 1.00, "recall": 1.00, "f1-score": 1.00, "support": 3},
+    "accuracy": 0.93
+  }
+}

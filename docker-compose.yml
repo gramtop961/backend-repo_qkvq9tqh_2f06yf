@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: emailsec-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - RATE_LIMIT_MAX=60
+      - RATE_LIMIT_WINDOW_SEC=300
+    restart: unless-stopped
+
+  frontend:
+    image: nginx:alpine
+    container_name: emailsec-frontend
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend/dist:/usr/share/nginx/html:ro
+    ports:
+      - "3000:80"
+    restart: unless-stopped

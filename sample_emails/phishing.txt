@@ -1,0 +1,6 @@
+Subject: URGENT: Verify your bank password immediately
+
+Your account will be suspended. Click http://not-your-bank.example.com/login to reset now.
+
+From: security@yourbànk.com
+Reply-To: attacker@gmail.com
